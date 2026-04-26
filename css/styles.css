@@ -137,7 +137,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/img/title_hero.png'), url('/img/img_hero.png');
+    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/w6wtvo7glhtbli6hw12t1/title_hero.png?rlkey=jokae2t3ip4jid31tojdse5wy&st=6p2vghoc&dl=0'), url('https://www.dl.dropboxusercontent.com/scl/fi/3sy6ajuilf8h9ik7slxjt/img_hero.png?rlkey=vpgdq19gn9ic7bgr1wyk1hnen&st=1588ybz3&dl=0');
     background-size: 60% auto, cover;
     background-position: 35% 10%, center;
     background-repeat: no-repeat;
