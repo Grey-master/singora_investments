@@ -703,7 +703,7 @@ a:hover {
 .map-placeholder {
     text-align: center;
     color: var(--light-text);
-    background-image: url('/img/mapa_sputnik_plan_596_603.png');
+    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/b3ao56f3kg4m0g189v4s5/mapa_sputnik_plan_596_603.png?rlkey=2au5wcskeojeozz7sfn8uhcw1&st=fzbkdhzg&dl=0');
     background-size: cover;
     background-position: center;
     width: 100%;
