@@ -1,0 +1,747 @@
+/* ===========================
+   RESPONSIVE STYLES
+   =========================== */
+
+/* DESKTOP MENU TOGGLE (992px and below) */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border-radius: 4px;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list a {
+        padding: 0.8rem;
+        border-bottom: none;
+        border-radius: 4px;
+        transition: background 0.3s ease;
+    }
+
+    .nav-list a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-bottom: none;
+    }
+
+    /* ABOUT MAP */
+    .plan {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* SMALL TABLET (500px - 768px) */
+@media (min-width: 500px) and (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo {
+        flex-shrink: 1;
+    }
+
+    .nav {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-left: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: auto;
+        background: rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border-radius: 4px;
+        align-items: flex-start;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    /* LOCATION SECTION */
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* ADVANTAGES SECTION */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* PROPERTIES SECTION */
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* ABOUT MAP */
+    .plan {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* MEDIUM BREAKPOINT (768px - 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: auto;
+        background: rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border-radius: 4px;
+        align-items: flex-start;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    /* ADVANTAGES & PROPERTIES GRIDS */
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .properties-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MEDIUM BREAKPOINT (769px - 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+    /* LOCATION SECTION */
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+     .location-map {
+        height: 500px;
+    }
+
+    /* ADVANTAGES & PROPERTIES GRIDS */
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .properties-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ABOUT MAP */
+    .plan {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* TABLET (768px and below) */
+@media (max-width: 768px) {
+    
+    /* TYPOGRAPHY */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    /* HEADER */
+    .header-content {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .nav {
+        width: 100%;
+        order: 3;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 80px 0;
+        min-height: 350px;
+    }
+
+    /* ABOUT */
+    .about-content {
+        gap: 2rem;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .stat {
+        padding: 1.5rem;
+    }
+
+    .stat h3 {
+        font-size: 1.8rem;
+    }
+
+    /* ADVANTAGES */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .advantage-card {
+        padding: 1.5rem;
+    }
+
+    .advantage-card .icon {
+        font-size: 2.5rem;
+    }
+
+    /* PROPERTIES */
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .property-card {
+        max-width: 100%;
+    }
+
+    /* LOCATION */
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .location-map {
+        height: 400px;
+    }
+
+    /* INVESTMENT */
+    .investment-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .terms-table {
+        font-size: 0.95rem;
+    }
+
+    .term-row {
+        padding: 1rem;
+    }
+
+    /* CONTACT */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-info {
+        gap: 1rem;
+    }
+
+    .contact-item {
+        padding: 1.5rem;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
+    /* ABOUT MAP */
+    .plan {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* SMALL BREAKPOINT (below 500px) */
+@media (min-width: 401px) and (max-width: 499px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    /* ABOUT MAP */
+    .plan {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* MOBILE (480px and below) */
+@media (max-width: 480px) {
+    
+    /* HEADER */
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        padding: 0.4rem 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    /* TYPOGRAPHY */
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .tagline {
+        font-size: 0.75rem;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 60px 0;
+        min-height: 300px;
+    }
+
+    /* ABOUT */
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .stat {
+        padding: 1rem;
+    }
+
+    .stat h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    /* ADVANTAGES */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .advantage-card {
+        padding: 1.2rem;
+    }
+
+    .advantage-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .advantage-card p {
+        font-size: 0.95rem;
+    }
+
+    .advantage-card .icon {
+        font-size: 2rem;
+    }
+
+    /* PROPERTIES */
+    .property-image {
+        height: 150px;
+    }
+
+    .property-info {
+        padding: 1.5rem;
+    }
+
+    .property-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .property-features li {
+        padding: 0.3rem 0;
+        font-size: 0.9rem;
+    }
+
+    .property-price {
+        font-size: 1.1rem;
+    }
+
+    /* LOCATION */
+    .location-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .location-benefits li {
+        padding: 0.8rem 0;
+        padding-left: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* INVESTMENT */
+    .investment-process h3,
+    .investment-terms h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .step {
+        padding: 1.5rem;
+        padding-left: 60px;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        left: 10px;
+    }
+
+    .step h4 {
+        font-size: 1rem;
+    }
+
+    .term-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .term-value {
+        text-align: left;
+    }
+
+    /* CONTACT */
+    .contact-item {
+        padding: 1rem;
+    }
+
+    .contact-item h3 {
+        font-size: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+        font-size: 16px; /* Prevent zoom on iOS  */
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title::after {
+        width: 60px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0.8rem;
+    }
+
+    /* ABOUT MAP */
+    .plan {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Small Mobile (320px and below) */
+@media (max-width: 320px) {
+    
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .advantage-card .icon {
+        font-size: 1.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+
+    .stat h3 {
+        font-size: 1.3rem;
+    }
+
+    /* ABOUT MAP */
+    .plan {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ===========================
+   LANDSCAPE ORIENTATION  ОРИЕНТАЦИЯ НА ЛАНДШАФТ
+   =========================== */
+
+@media (max-width: 768px) and (orientation: landscape) {
+    
+    .hero {
+        padding: 40px 0;
+        min-height: 250px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-overlay {
+        background-size: 80% auto, cover;
+    }
+}
+
+/* ===========================
+   HIGH RESOLUTION DISPLAYS  (RETINA)  ВЫСОКОЕ РАЗРЕШЕНИЕ (РЕТИНА)  
+   =========================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@media (max-width: 992px) {
+    .map-placeholder {
+        background-image: url('/img/mapa_sputnik_plan_628_369.png');
+    }
+}
+
+/* ===========================
+   PRINT STYLES (ПЕЧАТЬ)
+   =========================== */
+
+@media print {
+    
+    .header,
+    .hero,
+    .footer,
+    .contact-form,
+    .menu-toggle {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: #000;
+    }
+
+    .btn {
+        border: 1px solid #000;
+        background: white;
+        color: #000;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+}
+
+
+/*Адаптивное модальное окно*/
+
+
+/* ===== 1080px ===== */
+@media (max-width: 1080px) {
+  .modal-content {
+    max-width: 450px;
+    margin-bottom: 120px;
+  }
+}
+
+/* ===== 992px ===== */
+@media (max-width: 992px) {
+  .modal-content {
+    max-width: 400px;
+    margin-bottom: 80px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+}
+
+/* ===== 768px ===== */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-width: 350px;
+    margin-bottom: 40px;
+  }
+
+  .modal-body {
+    padding: 12px;
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .modal-text {
+    font-size: 14px;
+  }
+
+  .modal-price {
+    font-size: 16px;
+  }
+
+  .modal-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* ===== 480px ===== */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .modal img {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .modal-body {
+    padding: 10px;
+  }
+
+  .modal-title {
+    font-size: 15px;
+  }
+
+  .modal-text {
+    font-size: 13px;
+  }
+
+  .modal-price {
+    font-size: 15px;
+  }
+
+  .modal-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .close {
+    font-size: 22px;
+    top: 8px;
+    right: 10px;
+  }
+}
