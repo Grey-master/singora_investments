@@ -2,8 +2,8 @@
    RESPONSIVE STYLES
    =========================== */
 
-/* DESKTOP MENU TOGGLE (992px and below) */
-@media (max-width: 992px) {
+/* DESKTOP MENU TOGGLE (1050px and below) */
+@media (max-width: 1050px) {
     .menu-toggle {
         display: block;
     }
@@ -106,8 +106,8 @@
     }
 }
 
-/* MEDIUM BREAKPOINT (768px - 992px) */
-@media (min-width: 768px) and (max-width: 992px) {
+/* MEDIUM BREAKPOINT (768px - 1050px) */
+@media (min-width: 768px) and (max-width: 1050px) {
     .header-content {
         flex-direction: row;
         justify-content: space-between;
@@ -150,8 +150,8 @@
     }
 }
 
-/* MEDIUM BREAKPOINT (769px - 992px) */
-@media (min-width: 768px) and (max-width: 992px) {
+/* MEDIUM BREAKPOINT (769px - 1050px) */
+@media (min-width: 768px) and (max-width: 1050px) {
     /* LOCATION SECTION */
     .location-content {
         grid-template-columns: 1fr;
@@ -611,7 +611,7 @@
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1050px) {
     .map-placeholder {
         background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/hu7xeixv4mpad62t0gcer/mapa_sputnik_plan_628_369.png?rlkey=md5paokyaj15y16ncbavdm08i&st=qrkipu0e&dl=0');
     }
@@ -660,8 +660,8 @@
   }
 }
 
-/* ===== 992px ===== */
-@media (max-width: 992px) {
+/* ===== 1050px ===== */
+@media (max-width: 1050px) {
   .modal-content {
     max-width: 400px;
     margin-bottom: 80px;
