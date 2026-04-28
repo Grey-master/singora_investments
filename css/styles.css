@@ -23,7 +23,6 @@ body {
     color: var(--dark-text);
     line-height: 1.6;
     background-color: #fff;
-    padding-left: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,7 +54,7 @@ a:hover {
 .header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 100;
     box-shadow: var(--shadow);
@@ -186,7 +185,7 @@ a:hover {
     transition: all 0.3s ease;
     border: none;
     font-size: 1rem;
-    margin-left: 65px;
+    margin-left: 5px;
 }
 
 .btn-primary {
@@ -1138,6 +1137,28 @@ html {
 
 .messenger span{
     max-width:100px;
+}
+
+/* кнопка Наверх*/
+
+#btnTop {
+  display: none; /* Скрыта по умолчанию */
+  position: fixed; /* Фиксация на экране */
+  bottom: 20px; /* Отступ снизу */
+  right: 30px; /* Отступ справа */
+  z-index: 99; /* Поверх всех элементов */
+  border: none;
+  outline: none;
+  background-color: #517e47; /* Цвет фона */
+  color: white; /* Цвет стрелки */
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#btnTop:hover {
+  background-color: #0a491f; /* Цвет при наведении */
 }
 
 
