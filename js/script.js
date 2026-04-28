@@ -431,4 +431,31 @@ modalLink.addEventListener("click", (e) => {
 
 
 
+// ===================== 
+// кнопка Наверх
+// ========================
+
+// Получить кнопку
+var mybutton = document.getElementById("btnTop");
+
+// Показывать кнопку при прокрутке вниз на 20px
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// Плавная прокрутка наверх при клике
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+
+
+
+
 
