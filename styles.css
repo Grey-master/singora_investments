@@ -1,0 +1,1164 @@
+/* ===========================
+   SUNGORA INVESTMENTS - STYLES
+   =========================== */
+
+:root {
+    --primary-color: #0a491f;
+    --secondary-color: #417037;
+    --accent-color: #da822a;
+    --light-bg: #ecf0f1;
+    --dark-text: #1b242e;
+    --light-text: #454a4b;
+    --border-color: #ecf0f1;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   TYPOGRAPHY & BASICS
+   =========================== */
+
+body {
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 20px 0;
+}
+
+/* ===========================
+   HEADER & NAVIGATION  ЗАГОЛОВОК И НАВИГАЦИЯ
+   =========================== */
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+    color: white;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+/* ===========================
+   HERO SECTION  СЕКЦИЯ ГЕРОЯ
+   =========================== */
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/w6wtvo7glhtbli6hw12t1/title_hero.png?rlkey=jokae2t3ip4jid31tojdse5wy&st=6p2vghoc&dl=0'), url('https://www.dl.dropboxusercontent.com/scl/fi/3sy6ajuilf8h9ik7slxjt/img_hero.png?rlkey=vpgdq19gn9ic7bgr1wyk1hnen&st=1588ybz3&dl=0');
+    background-size: 60% auto, cover;
+    background-position: 35% 10%, center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: left;
+    z-index: 2;
+    max-width: 700px;
+    position: relative;
+}
+
+/* .hero-content h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    color: white;
+    margin-bottom: 1rem;
+} */
+
+.hero-content1 {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.9);
+   padding-top: 2rem;
+   
+}
+
+.hero-content2 {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    padding-left: 4rem;
+}
+
+/* ===========================
+   BUTTONS  КНОПКИ
+   =========================== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #CC9966;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    color: white;
+}
+
+/* ===========================
+   SECTIONS     СЕКЦИИ
+   =========================== */
+.header-parkan {
+    display: block;
+    height: 120px;
+    
+}
+
+.parkan{
+    display: block;
+    height: 20px;
+    margin-bottom: 2rem;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* ===========================
+   Про SUNGORA
+   =========================== */
+
+.about {
+    background: var(--light-bg);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+}
+
+
+.about-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    width: 100%;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.stat {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: var(--light-text);
+    margin-bottom: 0;
+}
+
+/* ===========================
+   План забудови
+   =========================== */
+
+/* Интерактивная карта*/
+.about-map {
+    display:flex;
+    justify-content: center;
+    align-items: center;          /* Центрируем по вертикали */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    background-color: #ecf0f1; 
+}
+
+.about-map img {
+    width: 100%;
+    height: auto;
+} 
+
+
+.plan{
+    width: 919px; 
+    position:relative;
+    margin: 40px auto;
+}
+
+.plan img{
+    width:100%; 
+    display:block
+}
+
+.plan svg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.prodano{
+    fill:rgba(78, 67, 69, 0.76);
+    stroke:#313331;
+}
+
+
+
+
+/* полигоны */
+.viewbox {
+  fill: rgba(0, 200, 0, 0.25);
+  stroke: #00aa00;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.viewbox:hover {
+  fill: rgba(0, 200, 0, 0.5);
+}
+
+.property-card {
+  transition: 0.4s;
+}
+
+.property-card.highlight {
+  box-shadow: 0 0 0 3px #00aa00, 0 0 20px rgba(0,170,0,0.6);
+  transform: scale(1.02);
+}
+
+/* ENDИнтерактивная карта*/
+
+/* модальное окно */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: end;  /*позиционирование контента*/
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+/* контент */
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  margin-bottom: 190px;  /*Сдвигаем модальное окно*/
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.modal img {
+  width: 100%;
+  display: block;
+}
+
+.modal-body {
+  padding: 15px;
+  justify-items: center;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-text {
+  margin-bottom: 8px;
+}
+
+.modal-price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* кнопка */
+.modal-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #00aa00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.modal-btn:hover {
+  background: #008800;
+  cursor: pointer;
+}
+
+/* закрытие */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+
+/* ===========================
+   ADVANTAGES SECTION       ПРЕИМУЩЕСТВА
+   =========================== */
+
+.advantages {
+    background: rgb(255, 255, 255);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.advantage-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: left;
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--accent-color);
+}
+
+.advantage-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.advantage-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.advantage-card .icon img {
+    height: 77px;
+    width: auto;
+}
+
+.advantage-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.advantage-card p {
+    color: var(--light-text);
+    margin-bottom: 0;
+}
+
+/* ===========================
+   INVESTMENTS SECTION      ИНВЕСТИЦИИ
+   =========================== */
+
+.investments {
+    background: var(--light-bg);
+}
+
+.investments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.investment-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: left;
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--accent-color);
+}
+
+.investment-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.investment-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.investment-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.investment-card p,
+.investment-card li {
+    color: var(--light-text);
+}
+
+@media (max-width: 900px) {
+    .investments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===========================
+   PROPERTIES SECTION       НЕДВИЖИМОСТЬ
+   =========================== */
+
+.properties {
+    background: var(--light-bg);
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.property-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.property-image {
+    height: 280px;
+    background: linear-gradient(135deg, #996666 0%, #CC6699 100%);
+    flex-shrink: 0;
+}
+
+.property-content {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.property-title {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.h3small {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.property-description {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.property-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.spec {
+    font-size: 0.85rem;
+    color: var(--light-text);
+    background: var(--light-bg);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+.property-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.property-income {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.btn-property {
+    padding: 12px 24px;
+    background: var(--accent-color);
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-property:hover {
+    background: #CC9966;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* ===========================
+   LOCATION SECTION     РАЗМЕЩЕНИЕ
+   =========================== */
+
+.location {
+    background: white;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.location-map {
+    width: 100%;
+    height: 700px;
+    background: var(--light-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-placeholder {
+    text-align: center;
+    color: var(--light-text);
+    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/b3ao56f3kg4m0g189v4s5/mapa_sputnik_plan_596_603.png?rlkey=2au5wcskeojeozz7sfn8uhcw1&st=fzbkdhzg&dl=0');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.map-placeholder p:first-child {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.location-info h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.location-benefits {
+    list-style: none;
+    padding: 0;
+}
+
+.location-benefits li {
+    padding: 1rem 0;
+    padding-left: 2rem;
+    color: var(--light-text);
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.location-benefits li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.buns li{
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+}
+
+.files li {
+    padding: 0.5rem 0 0.5rem 3rem;
+}
+
+.files li::before {
+    content: '📄';
+    position: absolute;
+    left: 0.5rem;
+    color: var(--accent-color);
+    font-size: 1.0rem;
+    line-height: 1.5;
+}
+
+.location-benefits li:last-child {
+    border-bottom: none;
+}
+
+/* ===========================
+   INFRASTRUCTURE PROPERTYES     ПРОПОЗИЦИИ
+   =========================== */
+
+.properties-benefits li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.properties-benefits {
+    list-style: none;
+    padding: 0;
+}
+
+.properties-benefits li {
+    padding: 0 0;
+    padding-left: 2rem;
+    color: var(--light-text);
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.properties-benefits li:last-child {
+    border-bottom: none;
+}
+
+/*== Типи будинків ==*/
+
+.property-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.property-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Слайдер */
+.slider {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* UI элементы */
+.slider-ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.arrow, .close-btn {
+  pointer-events: all;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.arrow.prev { left: 10px; }
+.arrow.next { right: 10px; }
+
+.close-btn {
+  top: 10px;
+  right: 10px;
+  transform: none;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background: orange;
+}
+
+
+/* ===========================
+   INVESTMENT SECTION       ИНВЕСТИЦИИ
+   =========================== */
+
+.investment {
+    background: var(--light-bg);
+}
+
+.investment-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.investment-process h3,
+.investment-terms h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.step {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    position: relative;
+    padding-left: 80px;
+}
+
+.step-number {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.step h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    color: var(--light-text);
+    margin-bottom: 0;
+}
+
+.terms-table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.term-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem;
+}
+
+.term-row:last-child {
+    border-bottom: none;
+}
+
+.term-label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.term-value {
+    text-align: right;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* ===========================
+   CONTACT SECTION      КОНТАКТЫ
+   =========================== */
+
+.contact {
+    background: white;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.contact-item {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.contact-item h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    margin-bottom: 0;
+    color: var(--light-text);
+}
+
+.contact-item a {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(45, 122, 78, 0.1);
+}
+
+.contact-form button {
+    align-self: flex-start;
+}
+
+/* ===========================
+   FOOTER   ФУТЕР   
+   =========================== */
+
+.footer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 0;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+/* ===========================
+   SMOOTH SCROLLING     ПЛАВНАЯ ПРОКРУТКА
+    =========================== */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===========================
+   UTILITY CLASSES      УТИЛИТАРНЫЕ КЛАССЫ
+   =========================== */
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+/*messengers*/
+/*профессиональные кнопки*/
+
+.messenger-bar{
+    display:flex;
+    gap:12px;
+    margin-top: 10px;
+}
+
+.messenger{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 12px;
+    border-radius:30px;
+    text-decoration:none;
+    color:#fff;
+    font-size:14px;
+    font-family:sans-serif;
+    transition:0.3s;
+}
+
+.messenger svg{
+    width:16px;
+    height:16px;
+    fill:white;
+}
+
+.viber{
+    background:#7360F2;
+}
+
+.telegram{
+    background:#229ED9;
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.messenger span{
+    max-width:0;
+    overflow:hidden;
+    white-space:nowrap;
+    transition:0.3s;
+}
+
+.messenger {
+    transform:translateY(-3px);
+    box-shadow:0 6px 14px rgba(0,0,0,0.25);
+}
+
+.messenger span{
+    max-width:100px;
+}
+
+/* кнопка Наверх*/
+
+#btnTop {
+  display: none; /* Скрыта по умолчанию */
+  position: fixed; /* Фиксация на экране */
+  bottom: 20px; /* Отступ снизу */
+  right: 30px; /* Отступ справа */
+  z-index: 99; /* Поверх всех элементов */
+  border: none;
+  outline: none;
+  background-color: #517e47; /* Цвет фона */
+  color: white; /* Цвет стрелки */
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#btnTop:hover {
+  background-color: #0a491f; /* Цвет при наведении */
+}
+
+
