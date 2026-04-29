@@ -425,7 +425,7 @@
 
     /* PROPERTIES */
     .property-image {
-        height: 150px;
+        height: avto;
     }
 
     .property-info {
@@ -613,7 +613,7 @@
 
 @media (max-width: 1050px) {
     .map-placeholder {
-        background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/hu7xeixv4mpad62t0gcer/mapa_sputnik_plan_628_369.png?rlkey=md5paokyaj15y16ncbavdm08i&st=qrkipu0e&dl=0');
+        background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/v6rf40s1faf9sbmfbwe8m/mapa_sputnik_plan_628_369.png?rlkey=ozqptdw9e5amtvdvcfcf1e8p6&st=qqyg7vz3&dl=0');
     }
 }
 

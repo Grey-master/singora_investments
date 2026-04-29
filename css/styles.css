@@ -6,12 +6,12 @@
     --primary-color: #0a491f;
     --secondary-color: #417037;
     --accent-color: #da822a;
-    --light-bg: #ecf0f1;
+    --light-bg: #edf7ea;
     --dark-text: #1b242e;
     --light-text: #454a4b;
-    --border-color: #ecf0f1;
+    --border-color: #edf7ea;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* ===========================
@@ -44,7 +44,7 @@ a:hover {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px 20px 0;
+    padding: 0 1rem 1rem 1rem;
 }
 
 /* ===========================
@@ -103,7 +103,7 @@ a:hover {
 
 .nav-list a {
     color: white;
-    font-weight: 500;
+    font-weight: 300;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid transparent;
@@ -112,6 +112,72 @@ a:hover {
 .nav-list a:hover {
     color: var(--accent-color);
     border-bottom-color: var(--accent-color);
+}
+
+
+/*На размерах меньше 1050px nav-menu раскрывается по центру*/
+
+@media (max-width: 1050px) {
+
+    .header-content {
+        position: relative;
+    }
+
+    /* Скрываем логотип при открытом меню */
+    .header-content.menu-open .logo,
+    .header-content.menu-open .tagline {
+        display: none;
+    }
+
+    /* Кнопка всегда видна */
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1001;
+    }
+
+    /* NAV как overlay */
+    .nav {
+        width: 100%;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    /* ОТКРЫТОЕ СОСТОЯНИЕ */
+    .header-content.menu-open .nav-list {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        z-index: 1000;
+    }
+
+    .header-content.menu-open .nav-list li {
+        margin: 10px 0;
+    }
+
+    .header-content.menu-open .nav-list a {
+        font-size: 1.5rem;
+    }
+
+    /* КНОПКА ЗАКРЫТИЯ */
+    .header-content.menu-open .menu-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        border: none;
+    }
 }
 
 /* ===========================
@@ -136,7 +202,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/w6wtvo7glhtbli6hw12t1/title_hero.png?rlkey=jokae2t3ip4jid31tojdse5wy&st=6p2vghoc&dl=0'), url('https://www.dl.dropboxusercontent.com/scl/fi/3sy6ajuilf8h9ik7slxjt/img_hero.png?rlkey=vpgdq19gn9ic7bgr1wyk1hnen&st=1588ybz3&dl=0');
+    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/n67i5kergpgxkkiu4sv48/title_hero.png?rlkey=0hscwr344xuc62gu8evw99b6x&st=o3ema7hz&dl=0'), url('https://www.dl.dropboxusercontent.com/scl/fi/x6ezxs1p8fou4x2jjul6q/img_hero.png?rlkey=nzrqji2qrduehdgza6r83t0jb&st=pkd5vfb0&dl=0');
     background-size: 60% auto, cover;
     background-position: 35% 10%, center;
     background-repeat: no-repeat;
@@ -203,20 +269,10 @@ a:hover {
 /* ===========================
    SECTIONS     СЕКЦИИ
    =========================== */
-.header-parkan {
-    display: block;
-    height: 120px;
-    
-}
 
-.parkan{
-    display: block;
-    height: 20px;
-    margin-bottom: 2rem;
-}
 
 .section {
-    padding: 80px 0;
+    padding: 2rem 0;
 }
 
 .section-title {
@@ -243,7 +299,6 @@ a:hover {
 /* ===========================
    Про SUNGORA
    =========================== */
-
 .about {
     background: var(--light-bg);
 }
@@ -300,25 +355,51 @@ a:hover {
     margin-bottom: 0;
 }
 
+/* Блок видео Vimeo*/
+.about-video {
+    margin-top: 1rem;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* ===========================
    План забудови
    =========================== */
 
 /* Интерактивная карта*/
+.masterplan {
+    background: var(--light-bg);
+}
+
 .about-map {
     display:flex;
     justify-content: center;
     align-items: center;          /* Центрируем по вертикали */
     width: 100%;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    background-color: #ecf0f1; 
+    
+   
 }
 
 .about-map img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
 } 
 
 
@@ -341,8 +422,8 @@ a:hover {
 }
 
 .prodano{
-    fill:rgba(78, 67, 69, 0.76);
-    stroke:#313331;
+    fill:rgba(4, 122, 4, 0.5);
+    stroke:#023002;
 }
 
 
@@ -450,7 +531,10 @@ a:hover {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 28px;
+  font-size: 40px;
+  transform: none;
+  background: rgba(0,0,0,0.4);
+  color: #dad6d6;
   cursor: pointer;
 }
 
@@ -461,7 +545,7 @@ a:hover {
    =========================== */
 
 .advantages {
-    background: rgb(255, 255, 255);
+    background: var(--light-bg);
 }
 
 .advantages-grid {
@@ -551,6 +635,11 @@ a:hover {
     color: var(--light-text);
 }
 
+.investment-card.highlight {
+  box-shadow: 0 0 0 3px #00aa00, 0 0 20px rgba(0,170,0,0.6);
+  transform: scale(1.02);
+}
+
 @media (max-width: 900px) {
     .investments-grid {
         grid-template-columns: 1fr;
@@ -615,6 +704,18 @@ a:hover {
     margin-top: 0;
 }
 
+.property-icon {
+    fill: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    width: 16px;
+    height: 16px;
+}
+
+.property-icon:hover {
+    fill: var(--accent-color);
+} 
+
 .property-description {
     color: var(--light-text);
     font-size: 0.95rem;
@@ -678,8 +779,9 @@ a:hover {
    =========================== */
 
 .location {
-    background: white;
+    background: var(--light-bg);
 }
+
 
 .location-content {
     display: grid;
@@ -702,7 +804,7 @@ a:hover {
 .map-placeholder {
     text-align: center;
     color: var(--light-text);
-    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/b3ao56f3kg4m0g189v4s5/mapa_sputnik_plan_596_603.png?rlkey=2au5wcskeojeozz7sfn8uhcw1&st=fzbkdhzg&dl=0');
+    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/6qv9fir0vv6w9yrufvxa3/mapa_sputnik_plan_596_603.png?rlkey=gw0dpvwlk2zfrf49inq3w3x11&st=rbcin30q&dl=0');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -756,7 +858,7 @@ a:hover {
 .files li::before {
     content: '📄';
     position: absolute;
-    left: 0.5rem;
+    left: 0,1rem;
     color: var(--accent-color);
     font-size: 1.0rem;
     line-height: 1.5;
@@ -981,7 +1083,7 @@ a:hover {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 3rem;
 }
 
@@ -1160,5 +1262,8 @@ html {
 #btnTop:hover {
   background-color: #0a491f; /* Цвет при наведении */
 }
+
+
+
 
 
