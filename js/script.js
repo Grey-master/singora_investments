@@ -9,30 +9,45 @@ document.addEventListener('DOMContentLoaded', function() {
     // MOBILE MENU TOGGLE
     // =============================
     
+    const headerContent = document.querySelector('.header-content');
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
-    
-    if (menuToggle && navList) {
-        menuToggle.addEventListener('click', function() {
-            navList.classList.toggle('active');
-            
-            // Update button icon
-            if (navList.classList.contains('active')) {
-                menuToggle.textContent = '✕';
-            } else {
-                menuToggle.textContent = '☰';
-            }
-        });
-        
-        // Close menu when clicking on a link
-        const navLinks = navList.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navList.classList.remove('active');
-                menuToggle.textContent = '☰';
-            });
-        });
+    const header = document.querySelector('.header');
+
+    function openMenu() {
+        headerContent.classList.add('menu-open');
+        menuToggle.textContent = '✕';
     }
+
+    function closeMenu() {
+        headerContent.classList.remove('menu-open');
+        menuToggle.textContent = '☰';
+    }
+
+    function toggleMenu() {
+        headerContent.classList.contains('menu-open') ? closeMenu() : openMenu();
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+    // Закрытие при клике по ссылке
+    navList.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Закрытие при клике вне header
+    document.addEventListener('click', (e) => {
+        if (!header.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    // Закрытие при потере фокуса
+    document.addEventListener('focusin', (e) => {
+        if (!header.contains(e.target)) {
+            closeMenu();
+        }
+    });
     
     // =============================
     // CONTACT FORM HANDLER
@@ -78,21 +93,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // SMOOTH SCROLL FOR OLD BROWSERS
     // =============================
     
-    const links = document.querySelectorAll('a[href^="#"]');
-    
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return;
-            
-            const target = document.querySelector(href);
-            
-            if (target && !CSS.supports('scroll-behavior', 'smooth')) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", function(e) {
+
+    const href = this.getAttribute("href");
+    if (!href || href === "#") return;
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+
+    // скролл с учётом хедера
+    const yOffset = -80;
+    const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth"
     });
+
+    // 🔥 подсветка
+    setTimeout(() => {
+      target.classList.add("highlight");
+    }, 500);
+
+    setTimeout(() => {
+      target.classList.remove("highlight");
+    }, 3000);
+
+  });
+});
 
 
   
@@ -283,7 +314,7 @@ const data = {
     area: "200 м²",
     areaEarth: "844,4 м²",
     price: "$510 000",
-    img: "https://www.dl.dropboxusercontent.com/scl/fi/3j24ftj4tfty9cikqmmco/edelveys1.jpg?rlkey=bc7kgu3gmf88bsyp7g6f982nd&st=ncjmt1uc&dl=0",
+    img: "https://www.dl.dropboxusercontent.com/scl/fi/gcbt8gtahgnnm4lmbyksl/edelveys1.jpg?rlkey=yv4ox8q2ej2s8pnrqiby3a98a&st=tizcmmhs&dl=0",
     scrollTo: "edelveys"
   },
   chervona_ruta: {
@@ -291,7 +322,7 @@ const data = {
     area: "50 м²",
     areaEarth: "500 м²",
     price: "$87 000",
-    img: "https://www.dl.dropboxusercontent.com/scl/fi/5wuk3vq0owra4z2om4dwq/chervona_ruta01.jpg?rlkey=nl3sgsww1cx9mpaz77oqri1hi&st=kpek343d&dl=0",
+    img: "https://www.dl.dropboxusercontent.com/scl/fi/ksntt8vgz4cf5oo27t4hn/chervona_ruta01.jpg?rlkey=6d9c7ybs1366kenx9r6fjfsjr&st=plbxq3zi&dl=0",
     scrollTo: "chervona_ruta"
     
   },
@@ -300,7 +331,7 @@ const data = {
     area: "-/- м²",
     areaEarth: "681,3 м²",
     price: "$38 800",
-    img: "https://www.dl.dropboxusercontent.com/scl/fi/38fkydaxj0r4ieh2kbl5h/dilyanka_04.jpg?rlkey=94p8383bdjhszdvs1sc56oow2&st=enc2li81&dl=0",
+    img: "https://www.dl.dropboxusercontent.com/scl/fi/fekywycnc8hya3ji3utrs/dilyanka_04.jpg?rlkey=f8ofa6n4o9oau8vv7tnbj4qpu&st=67a1svoz&dl=0",
     scrollTo: "model1"
   },
   dilyanka_05: {
@@ -308,15 +339,15 @@ const data = {
     area: "-/- м²",
     areaEarth: "502,3 м²",
     price: "$28 600",
-    img: "https://www.dl.dropboxusercontent.com/scl/fi/vz1b62fftpi1ni8fvpf8n/dilyanka_05.jpg?rlkey=tr4d01sf1xi3l8vn692new5qc&st=fshb5j8t&dl=0",
-    scrollTo: "model2"
+    img: "https://www.dl.dropboxusercontent.com/scl/fi/pf666hpy16d0zfk6bfha5/dilyanka_05.jpg?rlkey=up711knpmqwgshnexvx7o0epb&st=bv3rep9s&dl=0",
+    scrollTo: "model1"
   },
   dilyanka_spa: {
     title: "Ділянка_SPA",
     area: "-/- м²",
     areaEarth: "3100 м²",
     price: "$177 000",
-    img: "https://www.dl.dropboxusercontent.com/scl/fi/hh1siuj5uycsrcbr9vpty/dilyanka_spa1.jpg?rlkey=vetfjcgtc1y480f0s89ka2b3w&st=j1z8yqun&dl=0",
+    img: "https://www.dl.dropboxusercontent.com/scl/fi/nyokbbhx1pj0y45vsyax4/dilyanka_spa1.jpg?rlkey=fvrpu2xrsn9oa2c69gaxp5igq&st=6jgfvg2c&dl=0",
     scrollTo: "dilyanka_spa"
   }
 };
@@ -355,10 +386,10 @@ if (modal && modalImg && modalTitle && modalArea && modalAreaEarth && modalPrice
 
       modalImg.src = item.img;
       modalTitle.textContent = item.title;
-      modalAreaEarth.textContent = "Площа землі: " + item.areaEarth;
+      modalAreaEarth.textContent = "Площа ділянки: " + item.areaEarth;
       modalArea.textContent = "Площа будинку: " + item.area;
       modalPrice.textContent = "Ціна: " + item.price;
-      //modalLink.href = item.link;
+      modalLink.href = item.link;
 
       modal.classList.add("active");
     });
@@ -409,7 +440,7 @@ modalLink.addEventListener("click", (e) => {
   modal.classList.remove("active");
 
   // плавный скролл
-  const yOffset = -140; // высота хедера
+  const yOffset = -80; // высота хедера
   const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
   window.scrollTo({
