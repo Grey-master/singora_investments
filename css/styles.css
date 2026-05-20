@@ -187,10 +187,10 @@ a:hover {
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 120px 0;
+    
     position: relative;
     overflow: hidden;
-    min-height: 500px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,8 +202,8 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/n67i5kergpgxkkiu4sv48/title_hero.png?rlkey=0hscwr344xuc62gu8evw99b6x&st=o3ema7hz&dl=0'), url('https://www.dl.dropboxusercontent.com/scl/fi/x6ezxs1p8fou4x2jjul6q/img_hero.png?rlkey=nzrqji2qrduehdgza6r83t0jb&st=pkd5vfb0&dl=0');
-    background-size: 60% auto, cover;
+    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/n67i5kergpgxkkiu4sv48/title_hero.png?rlkey=0hscwr344xuc62gu8evw99b6x&st=o3ema7hz&dl=0'), url('https://www.dl.dropboxusercontent.com/scl/fi/s5dyoxze54usgp9wc3zr7/img_hero_2.png?rlkey=fx4qp3zc1gzp4kwtnwzsbtawt&st=etauxucf&dl=0');
+    background-size: 80% auto, cover;
     background-position: 35% 10%, center;
     background-repeat: no-repeat;
     z-index: 1;
@@ -804,7 +804,7 @@ a:hover {
 .map-placeholder {
     text-align: center;
     color: var(--light-text);
-    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/6qv9fir0vv6w9yrufvxa3/mapa_sputnik_plan_596_603.png?rlkey=gw0dpvwlk2zfrf49inq3w3x11&st=rbcin30q&dl=0');
+    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/cr3g1x819t543eefeibxr/mapa_sputnik_plan_596_603.png?rlkey=k1kelpzh75q0kxyjs7mdly0vd&st=h4dqp83o&dl=0');
     background-size: cover;
     background-position: center;
     width: 100%;
