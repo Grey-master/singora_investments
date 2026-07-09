@@ -43,51 +43,56 @@
 </head>
 <body>
     <!-- HEADER / NAVIGATION -->
-    <header class="header" >
+    <!-- HERO SECTION -->
+
+<section class="hero" id="header">
+    <div class="hero-overlay"></div>
+
+    <!-- HEADER ВНУТРИ HERO -->
+    <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <a href="#header">
-                        <img src="https://www.dl.dropboxusercontent.com/scl/fi/nn8kogxkmsnotp5vx99qu/logo_sungora_white_200-43.png?rlkey=o86v5ug8nm4ezf3k1rxryj9tp&st=03j5muy2&dl=0" alt="Sungora Investments" style="padding: 0 0 0 1 rem;" id="logo">
+                        <img src="https://www.dl.dropboxusercontent.com/scl/fi/nn8kogxkmsnotp5vx99qu/logo_sungora_white_200-43.png?rlkey=o86v5ug8nm4ezf3k1rxryj9tp&st=03j5muy2&dl=0" alt="Sungora Investments" id="logo">
                     </a>
-                    
-                    <!--<h1>Sungora Investments</h1>-->
                     <p class="tagline">Котеджне містечко у Славському</p>
                 </div>
+
                 <nav class="nav">
                     <button class="menu-toggle" aria-label="Меню">☰</button>
                     <ul class="nav-list" role="menubar" aria-label="Главное меню">
-                        <li role="none"><a role="menuitem" href="#location" aria-label="Перейти к розділу Локація">Локація</a></li>
-                        <li role="none"><a role="menuitem" href="#about" aria-label="Перейти к розділу Про проект">Про проект</a></li>
-                        <li role="none"><a role="menuitem" href="#masterplan" aria-label="Перейти к розділу План забудови">План забудови</a></li>
-                        <li role="none"><a role="menuitem" href="#advantages" aria-label="Перейти к розділу Переваги">Переваги</a></li>
-                        <li role="none"><a role="menuitem" href="#properties" aria-label="Перейти к розділу Типові будинки">Типові будинки</a></li>
-                        <li role="none"><a role="menuitem" href="#investments" aria-label="Перейти к розділу Инвестиції">Инвестиції</a></li>
-                        <li role="none"><a role="menuitem" href="#contact" aria-label="Перейти к розділу Контакти">Контакти</a></li>
+                        <li><a href="#location">Локація</a></li>
+                        <li><a href="#about">Про проект</a></li>
+                        <li><a href="#masterplan">План забудови</a></li>
+                        <li><a href="#advantages">Переваги</a></li>
+                        <li><a href="#properties">Типові будинки</a></li>
+                        <li><a href="#investments">Інвестиції</a></li>
+                        <li><a href="#contact">Контакти</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-
-    <section class="hero" id="header">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-content1"><p>Простір прибуткових інвестицій та</p></div>
-                <div class="hero-content2"><p> незабутнього відпочинку</p></div>
-                <a href="#investments" class="btn btn-primary" style="margin-left: 1,5rem;">Дізнатися більше</a>
+    <!-- HERO CONTENT -->
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-content1">
+                <p>Простір прибуткових інвестицій та</p>
             </div>
+            <div class="hero-content2">
+                <p>незабутнього відпочинку</p>
+            </div>
+            <a href="#investments" class="btn btn-primary">Дізнатися більше</a>
         </div>
-    </section>
-
+    </div>
+</section>
 <!-- LOCATION SECTION -->
     <div  id="location"></div>
     <section  class="section location" >
         <div class="container">
-            <h2 class="section-title">Локация</h2>
+            <h2 class="section-title">Локація</h2>
             <div class="location-content">
                 <div class="location-map">
                     <div class="map-placeholder"></div>
@@ -117,7 +122,7 @@
     
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="section about">
+    <section id="about" class="section about">  
         <div class="container">
             <h2 class="section-title">Про Sungora</h2>
             <div class="about-content">
@@ -154,7 +159,7 @@
                 <div class="about-video">
                     <div class="video-wrapper">
                         <video controls width="100%">
-                            <source src="https://www.dl.dropboxusercontent.com/scl/fi/jbxuhd0xjj5f8i8bb6wvc/.1-Sungora-sun-ski-resort.mp4?rlkey=hq16ur5z1vx21u0ztqxvzksfi&st=k6ewsyqb&dl=0" type="video/mp4">
+                            <source src="https://www.dl.dropboxusercontent.com/scl/fi/td0bo8frha2d4pygjqhu7/panorama_for_site.mp4?rlkey=xhkdn2gcze63zhsaitrdi7l3a&st=lilizhne&dl=0" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                     </div>
@@ -172,7 +177,7 @@
                 <div class="about-map">
                     
                     <div class="plan">
-                        <img src="https://www.dl.dropboxusercontent.com/scl/fi/e1wxa59tony391zughcgu/plan_zabudovy_svg.svg?rlkey=v7pgcfgmjpc8p97ghft4bstmw&st=waair3ho&dl=0"  alt="Master Plan" usemap="#image-map" id="imagemap" class="open-slider">
+                        <img src="https://www.dl.dropboxusercontent.com/scl/fi/yei88077xxtja13dt1bx3/plan_zabudovy.jpg?rlkey=l59vcq87qel5imii8ecmtwy1d&st=w4a604vd&dl=0"  alt="Master Plan" usemap="#image-map" id="imagemap" class="open-slider">
                         <svg viewBox="0 0 919 633">
                             
                             <polygon data-id="edelveys" class="viewbox viewbox-card" points="573,318 522,298 524,266 529,250 558,254 579,259" aria-label="Перейти к розділу Edelveys"/>
@@ -181,13 +186,18 @@
                             <polygon data-id="chervona_ruta" class="viewbox viewbox-card" points="428,233 437,239 492,246 487,282 454,275" aria-label="Перейти к розділу Chervona Ruta" />
                             
                             <polygon data-id="dilyanka_03"  class="prodano" points="348,223 368,193 402,184 419,202 415,239 399,234" aria-label="Перейти к розділу Shaphran"/>
+
                             
-                            <polygon data-id="dilyanka_04"  class="viewbox viewbox-card" points="417,223 420,205 402,184 477,156 472,195 427,212" aria-label="Перейти к розділу Модель 1"/>
+                            <!-- <polygon data-id="dilyanka_04"  class="viewbox viewbox-card" points="417,223 420,205 402,184 477,156 472,195 427,212" aria-label="Перейти к розділу Модель 1"/> -->
                             
-                            <polygon data-id="dilyanka_05"  class="viewbox viewbox-card" points="472,195 519,177 523,137 477,156" aria-label="Перейти к розділу Модель 1"/>
+                            <!-- <polygon data-id="dilyanka_05"  class="viewbox viewbox-card" points="472,195 519,177 523,137 477,156" aria-label="Перейти к розділу Модель 1"/> -->
+
+                            <polygon data-id="dilyanka_48"  class="viewbox viewbox-card" points="348,223 360,230 398,232 416,239 441,279 419,279 407,271 386,270 360,262 350,251" alt="Гірська орхідея" aria-label="Перейти к розділу Модель 1"/>
                             
                             <polygon data-id="dilyanka_spa"  class="viewbox viewbox-card" points="460,500 498,506 562,496 627,461 678,449 720,420 751,472 489,551 451,534" aria-label="Перейти к розділу Модель 1"/>
                         </svg>
+                    
+
                         
                     </div>
 
@@ -268,7 +278,8 @@
                         <!-- block slider -->
                         <div class="property-image" 
                             data-images='[
-                                "https://www.dl.dropboxusercontent.com/scl/fi/gcbt8gtahgnnm4lmbyksl/edelveys1.jpg?rlkey=yv4ox8q2ej2s8pnrqiby3a98a&st=ers9cx8w&dl=0",
+                                "https://www.dl.dropboxusercontent.com/scl/fi/qfdlrekfcq58kw9nwazdw/edelveys22.jpg?rlkey=62sjogre3tlhzihcdup81tazk&st=gsfkk8e6&dl=0",
+                                "https://www.dl.dropboxusercontent.com/scl/fi/fl38q7asvpuq0kma2hbhs/edelveys23.jpg?rlkey=13ejhuo8emfswal54p9lfu7f5&st=fxmd73db&dl=0",
                                 "https://www.dl.dropboxusercontent.com/scl/fi/g4lbxosbwohovigvfafe6/edelveys2.jpg?rlkey=3qgdsw58881bv4ivktrqy1w9w&st=33gtduji&dl=0",
                                 "https://www.dl.dropboxusercontent.com/scl/fi/heasbteisui0ygoj7rawu/edelveys3.jpg?rlkey=kjodwqvmnvm74ol10fa4we90l&st=h5h4t0o8&dl=0",
                                 "https://www.dl.dropboxusercontent.com/scl/fi/dx88l1timvwzjacnowbfe/edelveys4.jpg?rlkey=k0rq6sywn6zh1oub6shi63pzp&st=t6ju5hk2&dl=0",
@@ -281,7 +292,7 @@
                                 "https://www.dl.dropboxusercontent.com/scl/fi/ie2uekpehx58tmmdc9r3l/plan_edelveys.jpg?rlkey=rap0txmhnsebsf094izwwku1d&st=tdal52v3&dl=0"
                             ]'>
 
-                            <img src="https://www.dl.dropboxusercontent.com/scl/fi/gcbt8gtahgnnm4lmbyksl/edelveys1.jpg?rlkey=yv4ox8q2ej2s8pnrqiby3a98a&st=ers9cx8w&dl=0" class="preview-img" />
+                            <img src="https://www.dl.dropboxusercontent.com/scl/fi/qfdlrekfcq58kw9nwazdw/edelveys22.jpg?rlkey=62sjogre3tlhzihcdup81tazk&st=gsfkk8e6&dl=0" class="preview-img" />
 
                         </div>
                         <!-- END block slider -->
