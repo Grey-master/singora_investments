@@ -52,12 +52,16 @@ a:hover {
    =========================== */
 
 .header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    
     color: white;
-    position: relative;
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
-    box-shadow: var(--shadow);
+    /* backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.3); */
+   
 }
 
 .header-content {
@@ -77,6 +81,9 @@ a:hover {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* добавит ... если не влезет */
 }
 
 .menu-toggle {
@@ -94,6 +101,11 @@ a:hover {
 .menu-toggle:hover {
     background: rgba(255, 255, 255, 0.1);
 }
+.nav {
+    display: flex;
+
+    
+}
 
 .nav-list {
     display: flex;
@@ -102,17 +114,47 @@ a:hover {
 }
 
 .nav-list a {
+    position: relative;
+    text-decoration: none;
+    color: #fff; /* или твой цвет */
+}
+
+/* линия */
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+
+    width: 0;
+    height: 2px;
+    background: #fff;
+
+    transform: translateX(-50%);
+    opacity: 0;
+
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* hover эффект */
+.nav-list a:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* .nav-list a {
     color: white;
     font-weight: 300;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid transparent;
-}
+} */
 
-.nav-list a:hover {
+/* .nav-list a:hover {
     color: var(--accent-color);
     border-bottom-color: var(--accent-color);
-}
+} */
 
 
 /*На размерах меньше 1050px nav-menu раскрывается по центру*/
@@ -204,13 +246,13 @@ a:hover {
     bottom: 0;
     background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/n67i5kergpgxkkiu4sv48/title_hero.png?rlkey=0hscwr344xuc62gu8evw99b6x&st=o3ema7hz&dl=0'), url('https://www.dl.dropboxusercontent.com/scl/fi/s5dyoxze54usgp9wc3zr7/img_hero_2.png?rlkey=fx4qp3zc1gzp4kwtnwzsbtawt&st=etauxucf&dl=0');
     background-size: 80% auto, cover;
-    background-position: 35% 10%, center;
+    background-position: 35% calc(10% + 5rem), center;
     background-repeat: no-repeat;
     z-index: 1;
 }
 
 .hero-content {
-    text-align: left;
+    text-align: center;
     z-index: 2;
     max-width: 700px;
     position: relative;
@@ -226,7 +268,7 @@ a:hover {
 .hero-content1 {
     font-size: 1.8rem;
     color: rgba(255, 255, 255, 0.9);
-   padding-top: 2rem;
+   padding-top: 20rem;
    
 }
 
@@ -234,7 +276,7 @@ a:hover {
     font-size: 1.8rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2rem;
-    padding-left: 4rem;
+    
 }
 
 /* ===========================
@@ -425,6 +467,7 @@ a:hover {
     fill:rgba(4, 122, 4, 0.5);
     stroke:#023002;
 }
+
 
 
 
