@@ -310,15 +310,15 @@ if ('IntersectionObserver' in window) {
 // данные (можно вынести в JSON)
 const data = {
   edelveys: {
-    title: "Едельвейс",
+    title: 'Будинок "Едельвейс"',
     area: "200 м²",
     areaEarth: "844,4 м²",
     price: "$510 000",
-    img: "https://www.dl.dropboxusercontent.com/scl/fi/gcbt8gtahgnnm4lmbyksl/edelveys1.jpg?rlkey=yv4ox8q2ej2s8pnrqiby3a98a&st=tizcmmhs&dl=0",
+    img: "https://www.dl.dropboxusercontent.com/scl/fi/qfdlrekfcq58kw9nwazdw/edelveys22.jpg?rlkey=62sjogre3tlhzihcdup81tazk&st=gsfkk8e6&dl=0",
     scrollTo: "edelveys"
   },
   chervona_ruta: {
-    title: "Червона Рута",
+    title: 'Будинок "Червона Рута"',
     area: "50 м²",
     areaEarth: "500 м²",
     price: "$87 000",
@@ -342,8 +342,16 @@ const data = {
     img: "https://www.dl.dropboxusercontent.com/scl/fi/pf666hpy16d0zfk6bfha5/dilyanka_05.jpg?rlkey=up711knpmqwgshnexvx7o0epb&st=bv3rep9s&dl=0",
     scrollTo: "model1"
   },
+  dilyanka_48: {
+    title: 'Ділянка "Гірська орхідея" (інвестиція)',
+    area: "-/- м²",
+    areaEarth: "836,2 м²",
+    price: "$47 700",
+    img: "https://www.dl.dropboxusercontent.com/scl/fi/bum3dxyss1agzj2ydeo1k/dilyanka_48.jpg?rlkey=lspepl2y9fvb2j0e6uh6ck285&st=4bjkasho&dl=0",
+    scrollTo: "model1"
+  },
   dilyanka_spa: {
-    title: "Ділянка_SPA",
+    title: "Ресторан + SPA",
     area: "-/- м²",
     areaEarth: "3100 м²",
     price: "$177 000",
