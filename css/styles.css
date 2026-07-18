@@ -23,6 +23,7 @@ body {
     color: var(--dark-text);
     line-height: 1.6;
     background-color: #fff;
+    position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,6 +46,10 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem 1rem 1rem;
+}
+
+.page-wrapper{
+    position: relative;
 }
 
 /* ===========================
@@ -222,31 +227,49 @@ a:hover {
     }
 }
 
+
+.page-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: calc(100vh + 1000px);   /* hero + верхняя часть location */
+
+    background-image: url("https://www.dl.dropboxusercontent.com/scl/fi/uiqsenzcg745j7takbcto/img_hero_2_2.png?rlkey=cqk4cm2vb2sykxtmwx16rdeoa&st=vqmsjxi5&dl=0");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
 /* ===========================
    HERO SECTION  СЕКЦИЯ ГЕРОЯ
    =========================== */
 
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    
+    background: transparent;
     position: relative;
-    overflow: hidden;
-    height: 100vh;
+}
+
+.hero-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    min-height: 700px;
+    position: relative;
 }
 
 .hero-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/n67i5kergpgxkkiu4sv48/title_hero.png?rlkey=0hscwr344xuc62gu8evw99b6x&st=o3ema7hz&dl=0'), url('https://www.dl.dropboxusercontent.com/scl/fi/s5dyoxze54usgp9wc3zr7/img_hero_2.png?rlkey=fx4qp3zc1gzp4kwtnwzsbtawt&st=etauxucf&dl=0');
-    background-size: 80% auto, cover;
-    background-position: 35% calc(10% + 5rem), center;
+    
+    inset: 0;
+    background-image: url('https://www.dl.dropboxusercontent.com/scl/fi/n67i5kergpgxkkiu4sv48/title_hero.png?rlkey=0hscwr344xuc62gu8evw99b6x&st=o3ema7hz&dl=0');
+    background-size: 80%;
+    background-position: 35% calc(10% + 5rem);
     background-repeat: no-repeat;
     z-index: 1;
 }
@@ -338,9 +361,18 @@ a:hover {
     border-radius: 2px;
 }
 
+.section-advance {
+    font-size: 2.0rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
 /* ===========================
    Про SUNGORA
    =========================== */
+
 .about {
     background: var(--light-bg);
 }
@@ -628,6 +660,15 @@ a:hover {
     color: var(--primary-color);
 }
 
+.advantage-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
 .advantage-card p {
     color: var(--light-text);
     margin-bottom: 0;
@@ -778,7 +819,7 @@ a:hover {
 }
 
 .spec {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: var(--light-text);
     background: var(--light-bg);
     padding: 0.4rem 0.8rem;
@@ -822,7 +863,8 @@ a:hover {
    =========================== */
 
 .location {
-    background: var(--light-bg);
+    background: none;
+    margin-top: 100px;
 }
 
 
@@ -831,6 +873,7 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
+
 }
 
 .location-map {
@@ -867,6 +910,13 @@ a:hover {
     text-align: center;
 }
 
+.location-info h4 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
 .location-benefits {
     list-style: none;
     padding: 0;
@@ -878,6 +928,13 @@ a:hover {
     color: var(--light-text);
     position: relative;
     border-bottom: 1px solid var(--border-color);
+}
+
+.location-benefits li b {
+    color: var(--primary-color);
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .location-benefits li::before {
